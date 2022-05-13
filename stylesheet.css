@@ -13,11 +13,6 @@
     --color-neutral-white:hsl(0, 0%, 100%);
     --color-neutral-transparentWhite-p:hsla(0, 0%, 100%, 0.75);
     --color-neutral-transparentWhite-h:hsla(0, 0%, 100%);
-
-
-   
-
-
 }
 
 *{
@@ -27,26 +22,16 @@
 }
 
 body{
-
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
   background-color: var(--color-primary-darkBlue);
-}
-body p{
-  font-size: 15px;
-}
-
-img{
- 
-
 }
 
 .container{
 padding: 10rem 5rem;
-display: flex;
+
 
 }
 .card{
@@ -55,7 +40,6 @@ display: flex;
   display: flex;
   border-radius:10px;
   background-color: var(--color-primary-darkDesaturatedBlue);
-
 }
 
 .card__content{
@@ -64,25 +48,20 @@ display: flex;
   gap: 1em;
   padding: 5rem 5rem;
   flex: 1;
-
-
-
-
 }
 
 .card__content__info p{
   font-size: 14px;
   line-height: 1.5rem;
-
-
-
 }
+
 .card__content__info h1{
   margin-bottom: 1em;
   font-weight: 700;
   font-size: 2em;
   color: var(--color-neutral-white);
 }
+
 .card__content__info span{
   color: var(--color-accent-softViolet);
 }
@@ -91,14 +70,12 @@ display: flex;
   display: flex;
   gap: 3em;
   margin-top: 2em;
-
 }
 
 .card__content__stats__values{
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  
 }
 
 .card__content__stats__values p:first-child{
@@ -118,26 +95,30 @@ font-weight: 400 ;
   }
  
 
-  .card__picture{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-   
-
-
-
-
-
+ 
+  .card__picture__container{
+    position: relative;
   }
+  .card__picture__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 99%;
+    width: 100%;
+    opacity: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: hsl(277, 80%, 30%);
+  }
+
   .card__picture img{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     min-height: 412px;
     width: 100%;
-    
-   
-
-    
   }
 
 
@@ -150,17 +131,16 @@ font-weight: 400 ;
     }
 
     .card__picture img{
-     
       border-radius: 0;
       border-top-left-radius:10px ;
       border-top-right-radius:10px ;
     }
 
-    .container{
-      width: 100%;
+    .card__picture__overlay{
+      border-radius: 0;
+      border-top-left-radius:10px ;
+      border-top-right-radius:10px ;
 
-      padding: 5rem 1rem;
- 
     }
     
     }
