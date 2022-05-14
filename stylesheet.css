@@ -1,10 +1,7 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
 :root{
     --font-inter: 'Inter', sans-serif;
     --font-lexendDeca:  'Lexend Deca', sans-serif;
-
 
     --color-primary-darkBlue:hsl(233, 47%, 7%);
     --color-primary-darkDesaturatedBlue:hsl(244, 38%, 16%);
@@ -32,11 +29,11 @@ body{
 .container{
 padding: 10rem 5rem;
 
-
 }
 .card{
   max-width:1000px;
-  max-height: 412px;
+  height: 397px;
+
   display: flex;
   border-radius:10px;
   background-color: var(--color-primary-darkDesaturatedBlue);
@@ -59,6 +56,8 @@ padding: 10rem 5rem;
   margin-bottom: 1em;
   font-weight: 700;
   font-size: 2em;
+  position: relative;
+  opacity: 1;
   color: var(--color-neutral-white);
 }
 
@@ -94,11 +93,11 @@ font-weight: 400 ;
   font-weight: 700;
   }
  
-
  
   .card__picture__container{
     position: relative;
   }
+
   .card__picture__overlay{
     position: absolute;
     top: 0;
@@ -117,30 +116,61 @@ font-weight: 400 ;
   .card__picture img{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    min-height: 412px;
     width: 100%;
   }
 
 
-  @media only screen and (max-width: 600px) {
- 
-    .card {
-        flex-direction: column-reverse;
-        max-height: 100%;
-        max-width: 100%;
+  @media only screen and (max-width: 1150px) {
+
+
+    body{
+      height: 100%;
+    }
+
+    .container{
+      padding: 2rem;
+    }
+
+    .card{
+      flex-direction: column-reverse;
+      align-items: center;
+      max-width: 540px;
+      height: 100%;
+    }
+
+    .card__content{
+      margin-top:1rem ;
+      padding: 1rem;
+     max-width: 82%;
+      text-align: center;
+
+    }
+   
+    .card__content__stats{
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
     }
 
     .card__picture img{
-      border-radius: 0;
-      border-top-left-radius:10px ;
-      border-top-right-radius:10px ;
+     border-radius: 0;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
     }
 
     .card__picture__overlay{
+      height: 99.5%;
       border-radius: 0;
-      border-top-left-radius:10px ;
-      border-top-right-radius:10px ;
-
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
     }
+
+    
+ 
+
+
     
     }
+
+    .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
